@@ -1,0 +1,91 @@
+body {
+  background-color: hsl(275, 100%, 97%);
+  margin: 0;
+  font-family: Work Sans, sans-serif;
+}
+
+header {
+  height: 330px;
+  background-image: url("../assets/images/background-pattern-desktop.svg ");
+}
+
+.hidden {
+  opacity: 0%;
+  height: 0;
+  margin: 0;
+}
+
+.visible {
+  opacity: 100%;
+  height: 100%;
+  margin: initial;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+main {
+  position: absolute;
+  padding: 20px 40px;
+  border-radius: 18px;
+  background: hsl(0, 0%, 100%);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 99;
+}
+
+.card-header {
+  display: flex;
+  gap: 1.5em;
+}
+.card-header h1 {
+  font-size: clamp(35px, 5vw, 7vw);
+}
+
+.divider {
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+.divider:hover {
+  cursor: pointer;
+}
+
+.question {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+.question h1 {
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+}
+.question p {
+  line-height: 28px;
+  transition: all 100ms ease-in-out;
+  grid-column: span 2;
+  z-index: -999;
+}
+
+p {
+  font-size: 16px;
+  color: hsl(292, 16%, 49%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px 20px;
+  }
+  .card {
+    width: 300px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,102 @@
+$white: hsl(0, 0%, 100%);
+$light-pink: hsl(275, 100%, 97%);
+$greyish-purple: hsl(292, 16%, 49%);
+$dark-purple: hsl(292, 42%, 14%);
+$main-font: Work Sans, sans-serif;
+
+body {
+  background-color: $light-pink;
+  margin: 0;
+  font-family: $main-font;
+}
+
+header {
+  height: 330px;
+  background-image: url("../assets/images/background-pattern-desktop.svg ");
+}
+
+.hidden {
+  opacity: 0%;
+  height: 0;
+  margin: 0;
+}
+
+.visible {
+  opacity: 100%;
+  height: 100%;
+  margin: initial;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+main {
+  position: absolute;
+  padding: 20px 40px;
+  border-radius: 18px;
+  background: $white;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 99;
+}
+
+.card-header {
+  display: flex;
+  gap: 1.5em;
+
+  h1 {
+    font-size: clamp(35px, 5vw, 7vw);
+  }
+}
+
+.divider {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $light-pink;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.question {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+
+  h1 {
+    font-weight: 600;
+    color: $dark-purple;
+  }
+
+  p {
+    line-height: 28px;
+    transition: all 100ms ease-in-out;
+    grid-column: span 2;
+    z-index: -999;
+  }
+}
+
+p {
+  font-size: 16px;
+  color: $greyish-purple;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px 20px;
+  }
+
+  .card {
+    width: 300px;
+  }
+}
